@@ -1,14 +1,17 @@
+require(cowplot)
 require(data.table)
 require(dplyr)
 require(dsb)
 library(forcats)
 require(ggplot2)
+require(ggrepel)
 library(ggridges)
 require(grid)
 require(gridExtra)
 require(magick)
 require(mclust)
 require(patchwork)
+require(pROC)
 require(qpdf)
 require(reticulate)
 require(rhdf5)
@@ -132,7 +135,7 @@ overlap.gg = function(counts, prot, pos, pos.name, title, types, neg=NA, xlab='l
           panel.grid.minor = element_blank(),
           panel.border = element_blank(),
           panel.background = element_blank(),
-          legend.position.inside=c(1,1), 
+          legend.position=c(1,1), 
           legend.justification=c(1,1), 
           legend.box.just="right", 
           legend.margin=margin(0,0,0,0),
