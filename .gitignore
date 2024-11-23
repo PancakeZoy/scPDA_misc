@@ -3,6 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Ignore macOS system files
+.DS_Store
+
+# Ignore R history files
+.Rhistory
+
+# Ignore all CSV, H5, and RDS files
+*.csv
+*.h5
+*.rds
+
 # C extensions
 *.so
 
