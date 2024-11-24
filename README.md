@@ -29,16 +29,14 @@ pip install -e .
 conda install bioconda::scar
 
 # DSB
-install.packages('dsb')
+Rscript -e "install.packages('dsb')"
 
 # DecontPro
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-    install.packages("BiocManager")
-}
-BiocManager::install("decontX")
+Rscript -e "if (!requireNamespace('BiocManager', quietly = TRUE)) install.packages('BiocManager')"
+Rscript -e "BiocManager::install('decontX')"
 
 # GMM
-install.packages("mclust")
+Rscript -e "install.packages('mclust')"
 ```
 
 3. Run the script of protein denoising for each dataset:
