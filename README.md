@@ -1,8 +1,17 @@
 # scPDA_misc
 This Repo contains the code to reproduce the results and figures in manuscript of scPDA
 
+## Folder Explanation
 
-### Downloading Required Folders
+| Name | Content |
+|-----------------|-------------|
+| [data](data) | Four datasets (in the form of `.rds`) demonstrated in Results section of the manuscript|
+| [code](code) | Code of applying protein counts denosing methods (`GMM`, `DSB`, `scAR`, `DecontPro`, `scPDA`) applied to each dataset in `data` folder. The corresponding results are saved in `results` folder|
+| [results](results) | Denoised counts of each dataset resulted from each denoising method|
+| [fig_reprod](fig_reprod) | Code of reproducing each figure in the manuscript|
+| [scPDA](scPDA)| The developing version of `scPDA`|
+
+### Downloading required folders
 Please download the `data` and `results` folders from the figshare repository: [](), and place them in the root directory. Optionally, you can also generate the `results` folder by running scripts in the `code` folder, if the `data` folder is present. Note: Running these scripts may take significant time due to `DecontPro`. The structure of the starting data is shown in the tree diagram below:
 
 ```
@@ -90,19 +99,33 @@ Please download the `data` and `results` folders from the figshare repository: [
 13 directories, 68 files
 ```
 
-## Folder Explanation
+### To run the scripts in `code`
+1. Create a conda environment:
+```
+conda create -n denoise
+```
 
-| Name | Content |
-|-----------------|-------------|
-| [data](data) | Four datasets (in the form of `.rds`) demonstrated in Results section of the manuscript|
-| [code](code) | Code of applying protein counts denosing methods (`GMM`, `DSB`, `scAR`, `DecontPro`, `scPDA`) applied to each dataset in `data` folder. The corresponding results are saved in `results` folder|
-| [results](results) | Denoised counts of each dataset resulted from each denoising method|
-| [fig_reprod](fig_reprod) | Code of reproducing each figure in the manuscript|
-| [scPDA](scPDA)| The developing version of `scPDA`|
+2. Install each denoising methods:
+- `scPDA`
+```
+cd scPDA
+pip install -e .
+```
 
+- `scAR`
+```
+conda install bioconda::scar
+```
 
-## Analysis
+- `DSB`
+```
+install.packages('dsb')
+```
 
-
-
-
+- `DecontPro`
+```
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+}
+BiocManager::install("decontX")
+```
