@@ -1,7 +1,9 @@
 # scPDA_misc
 This Repo contains the code to reproduce the results and figures in manuscript of scPDA
 
-Please first download the `data` and `results` folders from this figshare repository: [][], and move them to the root directory. The structure of the starting data is shown in the tree diagram below.
+
+### Downloading Required Folders
+Please download the `data` and `results` folders from the figshare repository: [](), and place them in the root directory. Optionally, you can also generate the `results` folder by running scripts in the `code` folder, if the `data` folder is present. Note: Running these scripts may take significant time due to `DecontPro`. The structure of the starting data is shown in the tree diagram below:
 
 ```
 ├── LICENSE
