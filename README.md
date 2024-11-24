@@ -11,9 +11,44 @@ This Repo contains the code to reproduce the results and figures in manuscript o
 | [fig_reprod](fig_reprod) | Code of reproducing each figure in the manuscript|
 | [scPDA](scPDA)| The developing version of `scPDA`|
 
-### Downloading required folders
-Please download the `data` and `results` folders from the figshare repository: [](), and place them in the root directory. Optionally, you can also generate the `results` folder by running scripts in the `code` folder, if the `data` folder is present. Note: Running these scripts may take significant time due to `DecontPro`. The structure of the starting data is shown in the tree diagram below:
+## Downloading required folders
+Please download the `data` and `results` folders from the figshare repository: [](), and place them in the root directory. Optionally, you can also generate the `results` folder by running scripts in the `code` folder (see below), if the `data` folder is present. Note: Running these scripts may take significant time due to `DecontPro`. 
 
+**To generate the `results` folder (skip if you download it from figshare)**
+1. Create a conda environment:
+```
+conda create -n denoise
+```
+2. Install each denoising methods:
+```
+# scPDA
+cd scPDA
+pip install -e .
+
+# scAR
+conda install bioconda::scar
+
+# DSB
+install.packages('dsb')
+
+# DecontPro
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+}
+BiocManager::install("decontX")
+
+# GMM
+install.packages("mclust")
+```
+
+3. Run the script of protein denoising for each dataset:
+- `code/dsb/dsb.R`
+- `code/wnn25/wnn25.R`
+- `code/titr188/titr188.R`
+- `code/tea/tea.R`
+
+
+**The structure of the starting data is shown in the tree diagram below:**
 ```
 ├── LICENSE
 ├── README.md
@@ -97,35 +132,4 @@ Please download the `data` and `results` folders from the figshare repository: [
         └── wnn25_scPDA.h5
 
 13 directories, 68 files
-```
-
-### To run the scripts in `code`
-1. Create a conda environment:
-```
-conda create -n denoise
-```
-
-2. Install each denoising methods:
-- `scPDA`
-```
-cd scPDA
-pip install -e .
-```
-
-- `scAR`
-```
-conda install bioconda::scar
-```
-
-- `DSB`
-```
-install.packages('dsb')
-```
-
-- `DecontPro`
-```
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-    install.packages("BiocManager")
-}
-BiocManager::install("decontX")
 ```
