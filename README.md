@@ -74,6 +74,19 @@ Rscript -e "install.packages('mclust')"
 ├── data
 │   ├── dsb.rds
 │   ├── dsb_empty.rds
+│   ├── supp
+│   │   ├── 10k_neg_prot1.rds
+│   │   ├── 10k_neg_prot2.rds
+│   │   ├── 10k_neg_prot3.rds
+│   │   ├── 10k_neg_prot4.rds
+│   │   ├── 10k_pos_prot.rds
+│   │   ├── 5`_neg_prot2.rds
+│   │   ├── 5`_pos_prot.rds
+│   │   ├── 5k_neg_prot2.rds
+│   │   ├── 5k_pos_prot.rds
+│   │   ├── dsb_cells.rds
+│   │   ├── dsb_hash.rds
+│   │   └── dsb_lib.rds
 │   ├── teaseq.rds
 │   ├── titr188.rds
 │   └── wnn25.rds
@@ -88,46 +101,65 @@ Rscript -e "install.packages('mclust')"
 │   ├── Figure3.jpg
 │   ├── Figure4.R
 │   ├── Figure4.jpg
-│   └── Supplementary.pdf
-└── results
-    ├── dsb
-    │   ├── dsb_DSB.rds
-    │   ├── dsb_DecontPro.csv
-    │   ├── dsb_EmptyProfile.csv
-    │   ├── dsb_GMM.rds
-    │   ├── dsb_GMM_mu1.csv
-    │   ├── dsb_raw.csv
-    │   ├── dsb_scAR.h5
-    │   └── dsb_scPDA.h5
-    ├── tea
-    │   ├── tea_DecontPro.csv
-    │   ├── tea_EmptyProfile.csv
-    │   ├── tea_GMM_mu1.csv
-    │   ├── tea_dsb.rds
-    │   ├── tea_meta.csv
-    │   ├── tea_raw.csv
-    │   ├── tea_scAR.h5
-    │   └── tea_scPDA.h5
-    ├── titr188
-    │   ├── titr188_DecontPro.csv
-    │   ├── titr188_GMM_mu1.csv
-    │   ├── titr188_dsb.csv
-    │   ├── titr188_gmm.csv
-    │   ├── titr188_meta.csv
-    │   ├── titr188_raw.csv
-    │   ├── titr188_scAR.csv
-    │   ├── titr188_scAR.h5
-    │   ├── titr188_scPDA.csv
-    │   └── titr188_scPDA.h5
-    └── wnn25
-        ├── wnn25_DSB.rds
-        ├── wnn25_DecontPro.csv
-        ├── wnn25_GMM.rds
-        ├── wnn25_GMM_mu1.csv
-        ├── wnn25_meta.csv
-        ├── wnn25_raw.csv
-        ├── wnn25_scAR.h5
-        └── wnn25_scPDA.h5
+│   ├── Supplementary.pdf
+│   └── supp
+│       ├── Amb_Freq.R
+│       ├── Hash_vs_Lib.jpeg
+│       ├── Inconsistent_Definition.R
+│       ├── Prop_10K.jpeg
+│       ├── Prop_5K.jpeg
+│       ├── Prop_5prime.jpeg
+│       ├── Tr1_vs_Tr2.jpeg
+│       ├── Tr2_vs_Tr3.jpeg
+│       └── Tr3_vs_Tr4.jpeg
+├── results
+│   ├── dsb
+│   │   ├── dsb_DSB.rds
+│   │   ├── dsb_DecontPro.csv
+│   │   ├── dsb_EmptyProfile.csv
+│   │   ├── dsb_GMM.rds
+│   │   ├── dsb_GMM_mu1.csv
+│   │   ├── dsb_raw.csv
+│   │   ├── dsb_scAR.h5
+│   │   └── dsb_scPDA.h5
+│   ├── tea
+│   │   ├── tea_DecontPro.csv
+│   │   ├── tea_EmptyProfile.csv
+│   │   ├── tea_GMM_mu1.csv
+│   │   ├── tea_dsb.rds
+│   │   ├── tea_meta.csv
+│   │   ├── tea_raw.csv
+│   │   ├── tea_scAR.h5
+│   │   └── tea_scPDA.h5
+│   ├── titr188
+│   │   ├── titr188_DecontPro.csv
+│   │   ├── titr188_GMM_mu1.csv
+│   │   ├── titr188_dsb.csv
+│   │   ├── titr188_gmm.csv
+│   │   ├── titr188_meta.csv
+│   │   ├── titr188_raw.csv
+│   │   ├── titr188_scAR.csv
+│   │   ├── titr188_scAR.h5
+│   │   ├── titr188_scPDA.csv
+│   │   └── titr188_scPDA.h5
+│   └── wnn25
+│       ├── wnn25_DSB.rds
+│       ├── wnn25_DecontPro.csv
+│       ├── wnn25_GMM.rds
+│       ├── wnn25_GMM_mu1.csv
+│       ├── wnn25_meta.csv
+│       ├── wnn25_raw.csv
+│       ├── wnn25_scAR.h5
+│       └── wnn25_scPDA.h5
+└── scPDA
+    ├── scPDA
+    │   ├── __init__.py
+    │   └── main
+    │       ├── __init__.py
+    │       ├── _loss.py
+    │       ├── _network.py
+    │       └── api.py
+    └── setup.py
 
-13 directories, 68 files
+18 directories, 95 files
 ```
