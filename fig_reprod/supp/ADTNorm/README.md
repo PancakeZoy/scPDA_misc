@@ -1,0 +1,2 @@
+There are many dependencies in ADTnorm, so it takes a long time to install them all. Instead, you can use the Docker image of `ADTnorm`.
+Please refer to https://github.com/yezhengSTAT/ADTnorm for details.

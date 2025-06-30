@@ -133,7 +133,7 @@ plots = function(raw, dsb, decont, scar, scPDA, prot, pos, pos.name, types){
   auc=sapply(roc.list, function(x) x$auc)
   return(list(Raw=lfc.raw, DSB=lfc.dsb, DecontPro=lfc.decont, scAR=lfc.scar, scPDA=lfc.scPDA, AUC=auc))
 }
-pdf('fig_reprod/Supplementary.pdf', width=18, height=3, title='Background Probability for Marker Proteins')
+pdf('fig_reprod/supp/full_list_bg.pdf', width=18, height=3, title='Background Probability for Marker Proteins')
 lfc.df = data.frame(Raw=numeric(0), DSB=numeric(0), scAR=numeric(0), scPDA=numeric(0)); auc.df = lfc.df
 par(mfrow=c(23,1))
 marker.list = list()
